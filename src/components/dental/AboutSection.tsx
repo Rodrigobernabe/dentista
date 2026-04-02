@@ -28,19 +28,19 @@ const team = [
     name: "Dr. Martín García",
     role: "Director Clínico",
     specialty: "Implantología y Cirugía Oral",
-    image: "/team-1.jpg",
+    image: "./team-1.jpg",
   },
   {
     name: "Dra. Lucía Fernández",
     role: "Ortodoncista",
     specialty: "Invisalign® Diamond Provider",
-    image: "/team-2.jpg",
+    image: "./team-2.jpg",
   },
   {
     name: "Dr. Pablo Molina",
     role: "Especialista Estética",
     specialty: "Diseño Digital de Sonrisa",
-    image: "/team-3.jpg",
+    image: "./team-3.jpg",
   },
 ];
 
@@ -229,14 +229,14 @@ export function AboutSection() {
                 <div className="aspect-[3/4] rounded-2xl overflow-hidden">
                   <div
                     className="gsap-photo w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-500"
-                    style={{ backgroundImage: "url('/clinic-1.jpg')" }}
+                    style={{ backgroundImage: "url('./')" }}
                   />
                 </div>
                 {/* Foto 2 */}
                 <div className="aspect-square rounded-2xl overflow-hidden">
                   <div
                     className="gsap-photo w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-500"
-                    style={{ backgroundImage: "url('/clinic-2.jpg')" }}
+                    style={{ backgroundImage: "url('./')" }}
                   />
                 </div>
               </div>
@@ -245,14 +245,14 @@ export function AboutSection() {
                 <div className="aspect-square rounded-2xl overflow-hidden">
                   <div
                     className="gsap-photo w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-500"
-                    style={{ backgroundImage: "url('/clinic-3.jpg')" }}
+                    style={{ backgroundImage: "url('./')" }}
                   />
                 </div>
                 {/* Foto 4 */}
                 <div className="aspect-[3/4] rounded-2xl overflow-hidden">
                   <div
                     className="gsap-photo w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-500"
-                    style={{ backgroundImage: "url('/clinic-4.jpg')" }}
+                    style={{ backgroundImage: "url('./')" }}
                   />
                 </div>
               </div>

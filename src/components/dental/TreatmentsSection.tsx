@@ -20,7 +20,7 @@ const treatments: Treatment[] = [
     subtitle: "Dentales",
     description:
       "Recupera tu sonrisa con implantes de última generación. Tecnología 3D para resultados precisos.",
-    image: "/treatment-implant.jpg",
+    image: "./treatment-implant.jpg",
   },
   {
     id: "ortodoncia",
@@ -28,7 +28,7 @@ const treatments: Treatment[] = [
     subtitle: "Invisible",
     description:
       "Sistema Invisalign® certificado. Alineación perfecta sin que nadie lo note.",
-    image: "/treatment-ortho.jpg",
+    image: "./treatment-ortho.jpg",
   },
   {
     id: "estetica",
@@ -36,21 +36,21 @@ const treatments: Treatment[] = [
     subtitle: "Estética",
     description:
       "Carillas de porcelana y estética dental de alta precisión.",
-    image: "/treatment-aesthetic.jpg",
+    image: "./treatment-aesthetic.jpg",
   },
   {
     id: "blanqueamiento",
     title: "Blanqueamiento",
     subtitle: "LED Pro",
     description: "Resultados visibles en una hora. Tecnología profesional.",
-    image: "/treatment-whitening.jpg",
+    image: "./treatment-whitening.jpg",
   },
   {
     id: "general",
     title: "Odontología General",
     subtitle: "Preventiva",
     description: "Cuidado integral para toda la familia.",
-    image: "/treatment-general.jpg",
+    image: "./treatment-general.jpg",
   },
 ];
 

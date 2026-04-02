@@ -114,20 +114,20 @@ export function BeforeAfterSlider({
 // Showcase section
 const cases = [
   {
-    before: "/before-1.jpg",
-    after: "/after-1.jpg",
+    before: "./before-1.jpg",
+    after: "./after-1.jpg",
     title: "Blanqueamiento LED",
     description: "Resultados visibles en una sesión",
   },
   {
-    before: "/before-2.jpg",
-    after: "/after-2.jpg",
+    before: "./before-2.jpg",
+    after: "./after-2.jpg",
     title: "Diseño de Sonrisa",
     description: "Transformación con carillas",
   },
   {
-    before: "/before-3.jpg",
-    after: "/after-3.jpg",
+    before: "./before-3.jpg",
+    after: "./after-3.jpg",
     title: "Ortodoncia Invisible",
     description: "Alineación perfecta en 12 meses",
   },

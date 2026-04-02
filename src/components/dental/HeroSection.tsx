@@ -144,7 +144,7 @@ export function HeroSection() {
       <div ref={bgRef} className="absolute inset-0 z-0 will-change-transform">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/hero-dental.jpg')" }}
+          style={{ backgroundImage: "url('./')" }}
         />
         <div className="hero-overlay" />
         {/* Textura grain sutil */}

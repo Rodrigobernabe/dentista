@@ -13,37 +13,37 @@ const technologies = [
     icon: Scan,
     title: "Scanner Intraoral 3D",
     description: "Digitalización precisa en segundos. Sin moldes incómodos.",
-    image: "/tech-scanner.jpg",
+    image: "./tech-scanner.jpg",
   },
   {
     icon: Cpu,
     title: "Diseño CAD/CAM",
     description: "Fabricación digital de restauraciones en el mismo día.",
-    image: "/tech-cad.jpg",
+    image: "./tech-cad.jpg",
   },
   {
     icon: Microscope,
     title: "Microscopía Dental",
     description: "Precisión milimétrica en cada procedimiento.",
-    image: "/tech-micro.jpg",
+    image: "./tech-micro.jpg",
   },
   {
     icon: Radio,
     title: "Radiografía 3D",
     description: "Diagnósticos precisos con mínima radiación.",
-    image: "/tech-xray.jpg",
+    image: "./tech-xray.jpg",
   },
   {
     icon: Shield,
     title: "Esterilización Clase B",
     description: "Máxima seguridad con protocolos internacionales.",
-    image: "/tech-steril.jpg",
+    image: "./tech-steril.jpg",
   },
   {
     icon: Zap,
     title: "Láser Dental",
     description: "Tratamientos menos invasivos y recuperación rápida.",
-    image: "/tech-laser.jpg",
+    image: "./tech-laser.jpg",
   },
 ];
 
