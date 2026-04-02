@@ -1,0 +1,823 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ============================================
+   CLÍNICA DENTAL VILLA MERCEDES
+   "Arquitectura de la Sonrisa Minimalista"
+   ============================================ */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+  --font-mono: var(--font-geist-mono);
+  
+  /* Refined Palette - Arquitectura Minimalista */
+  --color-cream: #FBF9F6;
+  --color-moss: #1A3326;
+  --color-gold-matte: #D9C7AA;
+  --color-charcoal: #2A2A2A;
+  --color-sage-light: #E8EDE6;
+  --color-warm-white: #FEFDFB;
+  --color-stone: #8B8680;
+  
+  /* Legacy colors for compatibility */
+  --color-alabaster: #FBF9F6;
+  --color-forest: #1A3326;
+  --color-gold: #D9C7AA;
+  --color-terracotta: #D9C7AA;
+  
+  /* Sidebar */
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  
+  /* Charts */
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  
+  /* Base */
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-full: 9999px;
+}
+
+:root {
+  --radius: 0.5rem;
+  
+  /* Arquitectura de la Sonrisa - Palette */
+  --background: #FBF9F6;
+  --foreground: #2A2A2A;
+  --card: #FFFFFF;
+  --card-foreground: #2A2A2A;
+  --popover: #FFFFFF;
+  --popover-foreground: #2A2A2A;
+  
+  /* Primary: Moss Green */
+  --primary: #1A3326;
+  --primary-foreground: #FBF9F6;
+  
+  /* Secondary: Sage Light */
+  --secondary: #E8EDE6;
+  --secondary-foreground: #1A3326;
+  
+  /* Muted: Stone */
+  --muted: #F0EDE8;
+  --muted-foreground: #8B8680;
+  
+  /* Accent: Matte Gold */
+  --accent: #D9C7AA;
+  --accent-foreground: #1A3326;
+  
+  --destructive: #B91C1C;
+  --border: rgba(26, 51, 38, 0.08);
+  --input: rgba(26, 51, 38, 0.1);
+  --ring: #D9C7AA;
+  
+  /* Charts */
+  --chart-1: #1A3326;
+  --chart-2: #D9C7AA;
+  --chart-3: #8B8680;
+  --chart-4: #E8EDE6;
+  --chart-5: #2A2A2A;
+  
+  /* Sidebar */
+  --sidebar: #FBF9F6;
+  --sidebar-foreground: #2A2A2A;
+  --sidebar-primary: #1A3326;
+  --sidebar-primary-foreground: #FBF9F6;
+  --sidebar-accent: #D9C7AA;
+  --sidebar-accent-foreground: #1A3326;
+  --sidebar-border: rgba(26, 51, 38, 0.08);
+  --sidebar-ring: #D9C7AA;
+}
+
+.dark {
+  --background: #1A3326;
+  --foreground: #FBF9F6;
+  --card: #0F1F18;
+  --card-foreground: #FBF9F6;
+  --popover: #0F1F18;
+  --popover-foreground: #FBF9F6;
+  --primary: #D9C7AA;
+  --primary-foreground: #1A3326;
+  --secondary: #2A4A3A;
+  --secondary-foreground: #FBF9F6;
+  --muted: #2A4A3A;
+  --muted-foreground: #A8B5A0;
+  --accent: #D9C7AA;
+  --accent-foreground: #1A3326;
+  --destructive: #EF4444;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.1);
+  --ring: #D9C7AA;
+  
+  --chart-1: #D9C7AA;
+  --chart-2: #A8B5A0;
+  --chart-3: #FBF9F6;
+  --chart-4: #2A4A3A;
+  --chart-5: #8B8680;
+  
+  --sidebar: #0F1F18;
+  --sidebar-foreground: #FBF9F6;
+  --sidebar-primary: #D9C7AA;
+  --sidebar-primary-foreground: #1A3326;
+  --sidebar-accent: #2A4A3A;
+  --sidebar-accent-foreground: #FBF9F6;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: #D9C7AA;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Selection */
+  ::selection {
+    background-color: rgba(217, 199, 170, 0.3);
+    color: #1A3326;
+  }
+}
+
+/* ============================================
+   CUSTOM CURSOR - REFINED
+   ============================================ */
+.custom-cursor {
+  pointer-events: none;
+  position: fixed;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #FBF9F6;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-ring {
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid rgba(251, 249, 246, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+}
+
+.cursor-ring.hover {
+  width: 80px;
+  height: 80px;
+  border-color: #D9C7AA;
+  background: rgba(217, 199, 170, 0.1);
+}
+
+.cursor-text {
+  position: fixed;
+  pointer-events: none;
+  font-size: 11px;
+  font-weight: 600;
+  color: #1A3326;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+/* ============================================
+   GLASSMORPHISM - REFINED
+   ============================================ */
+.glass {
+  background: rgba(251, 249, 246, 0.85);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(26, 51, 38, 0.05);
+}
+
+.glass-dark {
+  background: rgba(26, 51, 38, 0.9);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(217, 199, 170, 0.1);
+}
+
+/* ============================================
+   MAGNETIC BUTTON - LIQUID FILL WITH WAVE
+   ============================================ */
+.magnetic-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.magnetic-btn::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: currentColor;
+  transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.magnetic-btn:hover::before {
+  height: 100%;
+}
+
+/* Liquid wave effect */
+.liquid-wave {
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-wave::after {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  left: -25%;
+  width: 150%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.3) 0%, transparent 70%);
+  transform: rotate(-3deg) translateY(100%);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.liquid-wave:hover::after {
+  transform: rotate(-3deg) translateY(0);
+}
+
+/* ============================================
+   TEXT REVEAL - GSAP STYLE
+   ============================================ */
+.split-text {
+  overflow: hidden;
+}
+
+.split-text .char {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.split-text.revealed .char {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.split-text .word {
+  display: inline-block;
+  overflow: hidden;
+  margin-right: 0.25em;
+}
+
+/* Architectural title effect */
+.architectural-title {
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+}
+
+.architectural-title .line {
+  display: block;
+  overflow: hidden;
+}
+
+.architectural-title .line-inner {
+  display: block;
+  transform: translateY(100%);
+}
+
+/* ============================================
+   PARALLAX LAYERS
+   ============================================ */
+.parallax-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-layer {
+  position: absolute;
+  inset: -20%;
+  will-change: transform;
+}
+
+.parallax-layer-back {
+  z-index: 1;
+}
+
+.parallax-layer-front {
+  z-index: 2;
+}
+
+/* ============================================
+   ASYMMETRIC TREATMENTS LAYOUT
+   ============================================ */
+.treatments-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .treatments-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   CARD HOVER - PRECISION EFFECT
+   ============================================ */
+.precision-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.precision-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  transition: border-color 0.5s ease;
+  pointer-events: none;
+}
+
+.precision-card:hover::before {
+  border-color: #D9C7AA;
+}
+
+.precision-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px -15px rgba(26, 51, 38, 0.15);
+}
+
+.precision-card .card-image {
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.precision-card:hover .card-image {
+  transform: scale(1.08);
+}
+
+/* Border draw effect */
+.border-draw {
+  position: relative;
+}
+
+.border-draw::before,
+.border-draw::after {
+  content: '';
+  position: absolute;
+  background: #D9C7AA;
+  transition: transform 0.4s ease;
+}
+
+.border-draw::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.border-draw::after {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.border-draw:hover::before,
+.border-draw:hover::after {
+  transform: scaleX(1);
+}
+
+/* ============================================
+   MAGNETIC CARD EFFECT
+   ============================================ */
+.magnetic-card {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.4s ease;
+  will-change: transform;
+}
+
+.magnetic-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(26, 51, 38, 0.1);
+}
+
+/* Background blur on hover */
+.magnetic-card .card-bg-blur {
+  position: absolute;
+  inset: 0;
+  background: rgba(251, 249, 246, 0.5);
+  backdrop-filter: blur(0px);
+  transition: backdrop-filter 0.4s ease;
+  pointer-events: none;
+}
+
+.magnetic-card:hover .card-bg-blur {
+  backdrop-filter: blur(8px);
+}
+
+/* ============================================
+   STICKY SECTION - MUSEUM STYLE
+   ============================================ */
+.sticky-section {
+  position: relative;
+}
+
+.sticky-content {
+  position: sticky;
+  top: 100px;
+  height: calc(100vh - 200px);
+}
+
+.sticky-image {
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.sticky-image.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ============================================
+   FOG/BLUR TESTIMONIALS
+   ============================================ */
+.fog-testimonial {
+  filter: blur(0px);
+  opacity: 1;
+  transform: translateY(0);
+  transition: filter 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fog-testimonial.faded {
+  filter: blur(4px);
+  opacity: 0.3;
+  transform: translateY(20px);
+}
+
+/* ============================================
+   BEFORE/AFTER SLIDER - REFINED
+   ============================================ */
+.ba-slider {
+  position: relative;
+  overflow: hidden;
+  cursor: ew-resize;
+}
+
+.ba-slider .ba-after,
+.ba-slider .ba-before {
+  position: absolute;
+  inset: 0;
+}
+
+.ba-slider .ba-before {
+  clip-path: inset(0 50% 0 0);
+  transition: clip-path 0.05s linear;
+}
+
+.ba-slider .ba-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #FBF9F6;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.ba-slider .ba-handle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  background: #FBF9F6;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(26, 51, 38, 0.2);
+}
+
+.ba-slider .ba-handle::after {
+  content: '↔';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: #1A3326;
+  font-weight: 600;
+}
+
+/* ============================================
+   FLOATING LABELS
+   ============================================ */
+.floating-input {
+  position: relative;
+}
+
+.floating-input input,
+.floating-input textarea {
+  width: 100%;
+  padding: 1.5rem 0 0.75rem;
+  border: none;
+  border-bottom: 1px solid rgba(26, 51, 38, 0.15);
+  background: transparent;
+  transition: border-color 0.3s ease, padding 0.3s ease;
+}
+
+.floating-input input:focus,
+.floating-input textarea:focus {
+  outline: none;
+  border-bottom-color: #D9C7AA;
+}
+
+.floating-input label {
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  font-size: 1rem;
+  color: #8B8680;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.floating-input input:focus ~ label,
+.floating-input input:not(:placeholder-shown) ~ label,
+.floating-input textarea:focus ~ label,
+.floating-input textarea:not(:placeholder-shown) ~ label {
+  top: 0;
+  font-size: 0.75rem;
+  color: #1A3326;
+}
+
+/* ============================================
+   HERO VIDEO OVERLAY
+   ============================================ */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(26, 51, 38, 0.3) 0%,
+    rgba(26, 51, 38, 0.5) 50%,
+    rgba(26, 51, 38, 0.85) 100%
+  );
+}
+
+/* ============================================
+   SCROLL PROGRESS
+   ============================================ */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #D9C7AA, #1A3326);
+  z-index: 9999;
+  transform-origin: left;
+}
+
+/* ============================================
+   CUSTOM SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FBF9F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9C7AA;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1A3326;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+/* Stagger delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+.stagger-7 { animation-delay: 0.7s; }
+.stagger-8 { animation-delay: 0.8s; }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .custom-cursor,
+  .cursor-dot,
+  .cursor-ring {
+    display: none !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+  
+  .architectural-title {
+    font-size: 2.5rem;
+  }
+  
+  .sticky-content {
+    position: relative;
+    top: 0;
+    height: auto;
+  }
+}
+
+/* ============================================
+   LOADING SCREEN
+   ============================================ */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: #1A3326;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.loading-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loading-bar {
+  width: 200px;
+  height: 2px;
+  background: rgba(251, 249, 246, 0.1);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.loading-bar-fill {
+  height: 100%;
+  background: #D9C7AA;
+  animation: loadingBar 1.5s ease-in-out infinite;
+}
+
+@keyframes loadingBar {
+  0% { width: 0%; transform: translateX(0); }
+  50% { width: 100%; transform: translateX(0); }
+  100% { width: 100%; transform: translateX(100%); }
+}
