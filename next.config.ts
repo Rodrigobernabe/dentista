@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "standalone",
+  // Configuración estricta para GitHub Pages
+  output: "export",
+  images: {
+    unoptimized: true, // Github Pages no tiene un servidor Node.js
+  },
   /* config options here */
   typescript: {
     ignoreBuildErrors: true,
